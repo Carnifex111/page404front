@@ -5,22 +5,20 @@ import {AboutPage, SkillsPage, HomePage, Page404, ConnectPage} from '../pages/in
 
 const Router = () => {
     return(
-        <BrowserRouter>
-             <Switch>
-                <Route exact path="/about">
-                    <AboutPage />
-                </Route>
-                <Route exact path="/skills">
-                    <SkillsPage />
-                </Route>
-                <Route exact path="/connect">
-                    <ConnectPage />
-                </Route>
-                <Route exact path="/">
-                    <HomePage />
-                </Route>
-            </Switch>
-        </BrowserRouter>
+        <Switch>
+            <Route exact path="/about">
+                <AboutPage />
+            </Route>
+            <Route exact path="/skills">
+                <SkillsPage />
+            </Route>
+            <Route exact path="/connect">
+                <ConnectPage />
+            </Route>
+            <Route exact path="/">
+                <HomePage />
+            </Route>
+        </Switch>
     )
 }
 

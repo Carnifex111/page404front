@@ -1,0 +1,88 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    height: 8vh;
+    &__logo{
+        font-weight: 700;
+    }
+    &__menu{          
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            gap: 3rem;   
+        }
+    }
+    &__toggler{
+        cursor: pointer;
+        display: none;
+    }
+    &__item__link{
+        font-weight: 700;
+        font-size: 18px;
+    }
+    &__item__link-selected{
+        font-weight: 900;
+        animation: jump 2s ease-in-out infinite;
+    }
+    &__toggler div{
+        width: 2rem;
+        height: 0.2rem;
+        margin: 0.4rem;
+        background: rgb(204, 204, 204);
+        transition: 0.3s ease-in;
+    }
+    @media(max-width: 768px) {
+        padding: 20px;
+        &__toggler{
+            display: block;
+            z-index: 99999;
+        }
+        &__menu{
+            backdrop-filter: blur(2px);
+            position: fixed;
+            top: 0vh;
+            right: 0;
+            width: 50%;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+            flex-direction: column;
+            transform: translate(100%);
+            transition: 0.3s ease-in;
+            ul{
+                display: flex;
+                flex-direction: column;
+                margin-top: 150px;
+            }
+        }
+    }
+}
+
+.nav__active {
+    transform: translateX(0);
+}
+
+.toggle{
+    .line1{
+        transform: rotate(-45deg) translate(-7px, 6px);
+    }
+    .line2{
+        opacity: 0;
+    }
+    .line3{
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+}
+
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    
+    50% {
+      transform: translateY(5px);
+      filter: blur(3px);
+    }
+  }

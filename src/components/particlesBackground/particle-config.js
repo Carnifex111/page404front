@@ -1,7 +1,7 @@
 const ParticleConfig = {
         "fullScreen": {
             "enable": true,
-            "zIndex": 1
+            "zIndex": -1
         },
         "particles": {
             "number": {
