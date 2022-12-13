@@ -1,6 +1,6 @@
 import React from "react";
-import {BrowserRouter, Switch, Route} from "react-router-dom";
-import {AboutPage, SkillsPage, HomePage, Page404, ConnectPage} from '../pages/index'
+import { Switch, Route} from "react-router-dom";
+import {AboutPage, SkillsPage, HomePage, ConnectPage} from '../pages/index'
 
 
 const Router = () => {

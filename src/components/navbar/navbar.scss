@@ -25,7 +25,7 @@
     }
     &__item__link-selected{
         font-weight: 900;
-        animation: jump 2s ease-in-out infinite;
+        animation: jump 1.5s ease-in-out infinite;
     }
     &__toggler div{
         width: 2rem;
@@ -58,6 +58,10 @@
             }
         }
     }
+}
+
+.logotype{
+    width: 100px;
 }
 
 .nav__active {

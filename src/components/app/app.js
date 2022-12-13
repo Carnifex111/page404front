@@ -5,11 +5,15 @@ import Navbar from '../navbar/navbar';
 
 const App = () => {
   return (
+    
     <BrowserRouter>
+    <div className="overlay">
       <Navbar/>
       <Router/>
       <ParticlesBackground/>
+    </div>
     </BrowserRouter>
+    
   );
 }
 
