@@ -1,3 +1,43 @@
-.hello{
-    color: #fff;
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .block-home{
+        margin-top: 40px;
+        backdrop-filter: blur(10px);
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 4% 10%;
+        @media(max-width: 826px) {
+            padding: 2% 5%;
+            margin-top: 20px;
+        }
+        @media(max-width: 573px) {
+            margin-top: 5px;
+        }
+        &__title{
+            text-align: center;
+            font-size: 50px;
+            text-transform: uppercase;
+            @media(max-width: 1190px) {
+                font-size: 40px;
+            }
+            @media(max-width: 1190px) {
+                font-size: 30px;
+            }
+            @media(max-width: 826px) {
+                font-size: 25px;
+            }
+            @media(max-width: 573px) {
+                font-size: 20px;
+            }
+            @media(max-width: 459px) {
+                font-size: 15px;
+            }
+            @media(max-width: 379px) {
+                font-size: 14px;
+            }
+        }
+    }
 }
