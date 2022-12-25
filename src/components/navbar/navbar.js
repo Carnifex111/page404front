@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./navbar.scss";
 import { useState } from "react";
 import Logo from "../../resources/img/logo.webp";
+import ROUTINGS from "../../router/routings";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("nav__menu");
@@ -19,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="nav-wrap">
       <nav className="nav">
-        <Link className="nav__logo" to="/">
+        <Link className="nav__logo" to={ROUTINGS.HOME}>
           <img className="logotype" src={Logo} />
         </Link>
         <div className={activeMenu}>
@@ -29,7 +30,7 @@ const Navbar = () => {
                 exact
                 activeClassName="nav__item__link-selected"
                 className="nav__item__link"
-                to="/about"
+                to={ROUTINGS.ABOUT}
               >
                 About
               </NavLink>
@@ -39,7 +40,7 @@ const Navbar = () => {
                 exact
                 activeClassName="nav__item__link-selected"
                 className="nav__item__link"
-                to="/skills"
+                to={ROUTINGS.SKILLS}
               >
                 Skills
               </NavLink>
@@ -49,7 +50,7 @@ const Navbar = () => {
                 exact
                 activeClassName="nav__item__link-selected"
                 className="nav__item__link"
-                to="/connect"
+                to={ROUTINGS.CONNECT}
               >
                 Connect
               </NavLink>
