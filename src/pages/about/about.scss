@@ -1,0 +1,12 @@
+.wrap-about {
+  display: flex;
+  max-width: 1300px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  justify-content: space-around;
+  @media (max-width: 1029px) {
+    margin-top: 500px;
+  }
+}
