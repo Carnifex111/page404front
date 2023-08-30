@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <div className="wrap-about">
       <PeopleCart
-        name="Maksim Pugachev"
+        name="Max Pugachev"
         logo={logoMax}
         descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
           corrupti, quae itaque expedita eligendi corporis facere, officiis

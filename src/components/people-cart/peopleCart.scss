@@ -1,25 +1,29 @@
 .about-cart {
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 30px;
   padding: 30px;
-  border: 2px solid #fff;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  border: 2px solid #fff;
+  @media (max-width: 657px) {
+    flex-direction: column;
+  }
   &-title {
     font-size: 30px;
     font-weight: 600;
   }
 }
+.about-cart-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .about-cart-img {
   img {
     width: 300px;
-    border-radius: 5px;
+    border-radius: 100%;
   }
 }
