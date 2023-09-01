@@ -5,24 +5,26 @@ import "./about.scss";
 
 const AboutPage = () => {
   return (
-    <div className="wrap-about page">
-      <PeopleCart
-        name="Max Pugachev"
-        logo={logoMax}
-        descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+    <>
+      <div className="wrap-about page">
+        <PeopleCart
+          name="Max Pugachev"
+          logo={logoMax}
+          descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
           corrupti, quae itaque expedita eligendi corporis facere, officiis
           labore esse necessitatibus inventore incidunt repudiandae quam? In sed
           tempore id deleniti quod."
-      />
-      <PeopleCart
-        name="Ivan Shirov"
-        logo={logoIvan}
-        descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+        />
+        <PeopleCart
+          name="Ivan Shirov"
+          logo={logoIvan}
+          descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
           corrupti, quae itaque expedita eligendi corporis facere, officiis
           labore esse necessitatibus inventore incidunt repudiandae quam? In sed
           tempore id deleniti quod."
-      />
-    </div>
+        />
+      </div>
+    </>
   );
 };
 

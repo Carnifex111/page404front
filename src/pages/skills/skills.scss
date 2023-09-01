@@ -1,0 +1,15 @@
+.skills {
+  &-title {
+    margin-top: 200px;
+    font-size: 40px;
+    margin-bottom: -70px;
+    font-weight: 600;
+    @media (max-width: 810px) {
+      font-size: 30px;
+    }
+    @media (max-width: 622px) {
+      font-size: 20px;
+      display: none;
+    }
+  }
+}

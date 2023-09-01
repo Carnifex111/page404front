@@ -1,0 +1,54 @@
+.slide-block {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1000px) {
+    flex-direction: column-reverse;
+  }
+  @media (max-width: 500px) {
+    text-align: center;
+    gap: 10px;
+  }
+  &-logo {
+    &-icon {
+      margin-top: 20px;
+      margin-right: 30px;
+      img {
+        animation: beating 1.5s infinite;
+        width: 250px;
+        @media (max-width: 1000px) {
+          width: 150px;
+        }
+      }
+    }
+  }
+  &-title {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  &-subtitle {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  &-technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
