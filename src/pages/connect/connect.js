@@ -1,10 +1,5 @@
-
 const ConnectPage = () => {
-    return(
-        <>
-            ConnectPage
-        </>
-    )
-}
+  return <div className="page">ConnectPage</div>;
+};
 
 export default ConnectPage;

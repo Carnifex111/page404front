@@ -5,7 +5,7 @@ import "./about.scss";
 
 const AboutPage = () => {
   return (
-    <div className="wrap-about">
+    <div className="wrap-about page">
       <PeopleCart
         name="Max Pugachev"
         logo={logoMax}
