@@ -1,0 +1,41 @@
+.portfolio-cart {
+  max-width: 850px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #111111;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  &-title {
+    font-weight: 600;
+    font-size: 30px;
+  }
+  &-descr {
+    font-size: 15px;
+  }
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-site {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      color: #111111;
+      font-weight: 600;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: 500ms ease;
+      &:hover {
+        background-color: #111111;
+        border: 2px solid #fff;
+        color: #fff;
+      }
+    }
+  }
+}

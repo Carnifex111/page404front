@@ -5,7 +5,7 @@ import "./about.scss";
 
 const AboutPage = () => {
   return (
-    <>
+    <div data-aos="zoom-in-down">
       <div className="wrap-about page">
         <PeopleCart
           name="Max Pugachev"
@@ -24,7 +24,7 @@ const AboutPage = () => {
           tempore id deleniti quod."
         />
       </div>
-    </>
+    </div>
   );
 };
 

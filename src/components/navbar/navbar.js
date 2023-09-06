@@ -7,7 +7,7 @@ import ROUTINGS from "../../router/routings";
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("nav__menu");
   const [toggleIcon, setToggleIcon] = useState("nav__toggler");
-
+  const { PORTFOLIO, ABOUT, SKILLS, CONNECT, HOME } = ROUTINGS;
   const menuToggle = () => {
     activeMenu === "nav__menu"
       ? setActiveMenu("nav__menu nav__active")
@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="nav-wrap">
       <nav className="nav">
-        <Link className="nav__logo" to={ROUTINGS.HOME}>
+        <Link className="nav__logo" to={HOME}>
           <img className="logotype" src={Logo} />
         </Link>
         <div className={activeMenu}>
@@ -30,7 +30,7 @@ const Navbar = () => {
                 exact
                 activeClassName="nav__item__link-selected"
                 className="nav__item__link"
-                to={ROUTINGS.ABOUT}
+                to={ABOUT}
               >
                 About
               </NavLink>
@@ -40,7 +40,7 @@ const Navbar = () => {
                 exact
                 activeClassName="nav__item__link-selected"
                 className="nav__item__link"
-                to={ROUTINGS.SKILLS}
+                to={SKILLS}
               >
                 Skills
               </NavLink>
@@ -50,7 +50,17 @@ const Navbar = () => {
                 exact
                 activeClassName="nav__item__link-selected"
                 className="nav__item__link"
-                to={ROUTINGS.CONNECT}
+                to={PORTFOLIO}
+              >
+                PORTFOLIO
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                exact
+                activeClassName="nav__item__link-selected"
+                className="nav__item__link"
+                to={CONNECT}
               >
                 Connect
               </NavLink>

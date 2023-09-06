@@ -2,7 +2,7 @@ import "./connect.scss";
 
 const ConnectPage = () => {
   return (
-    <div className="connent">
+    <div className="connent" data-aos="zoom-out">
       <form className="connent-form">
         <div className="connent-form-title">Сontact us</div>
         <div className="input-group">

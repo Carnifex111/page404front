@@ -1,0 +1,19 @@
+.portfolio {
+  &-carts {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    @media (max-width: 839px) {
+      margin-top: 150px;
+    }
+  }
+}
+
+.title-portfolio {
+  padding-left: 70px;
+}

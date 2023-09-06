@@ -1,4 +1,5 @@
 const ROUTINGS = {
+  PORTFOLIO: "/portfolio",
   ABOUT: "/about",
   SKILLS: "/skills",
   CONNECT: "/connect",

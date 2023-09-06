@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-creative";
@@ -14,11 +14,12 @@ import ReactIcon from "../../resources/icon/react.svg";
 import NestIcon from "../../resources/icon/nestjs.svg";
 import NoCodeIcon from "../../resources/icon/nocode.svg";
 import DesktopApp from "../../resources/icon/desktop-application-app-icon.svg";
+import WordPressIcon from "../../resources/icon/wordpress.svg";
 import Slide from "../../components/slide/slide";
 
 const SkillsPage = () => {
   return (
-    <div className="skills">
+    <div data-aos="zoom-in-up" className="skills">
       <div className="skills-title">What do we use in development?</div>
       <Swiper
         autoplay={{
@@ -141,6 +142,50 @@ const SkillsPage = () => {
             </li>
             <li>
               <strong>GIT: </strong> Version control and team collaboration.
+            </li>
+          </Slide>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Slide img={WordPressIcon} title="WordPress Development">
+            <li>
+              <strong>WordPress Core:</strong> Understanding of WordPress
+              architecture, including themes and plugins.
+            </li>
+            <li>
+              <strong>PHP:</strong> Backend programming for custom theme and
+              plugin development.
+            </li>
+            <li>
+              <strong>Gutenberg Blocks:</strong> Proficient in creating custom
+              blocks for the new editor.
+            </li>
+            <li>
+              <strong>Elementor / WPBakery:</strong> Experience with popular
+              page builders for rapid design.
+            </li>
+            <li>
+              <strong>WooCommerce:</strong> For eCommerce capabilities,
+              including custom store themes and plugins.
+            </li>
+            <li>
+              <strong>SEO Plugins (Yoast, Rank Math):</strong> Implementation
+              and configuration for SEO.
+            </li>
+            <li>
+              <strong>MySQL:</strong> Database management, queries, and
+              optimization for WordPress.
+            </li>
+            <li>
+              <strong>APIs:</strong> Experience in integrating third-party APIs
+              like payment gateways, social media, etc.
+            </li>
+            <li>
+              <strong>Security:</strong> Knowledge of best practices for
+              securing WordPress websites.
+            </li>
+            <li>
+              <strong>Git:</strong> Version control for codebase and team
+              collaboration.
             </li>
           </Slide>
         </SwiperSlide>
