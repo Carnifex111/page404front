@@ -13,11 +13,9 @@ const PortfolioCart = ({ title, descr, gitLink, link }) => {
               <img src={GitHub} alt="github" />
             </a>
           </div>
-          <div className="portfolio-cart-links-site">
-            <a className="site-link" href={link}>
-              GO
-            </a>
-          </div>
+          <a className="site-link" href={link}>
+            <div className="portfolio-cart-links-site">GO</div>
+          </a>
         </div>
       </div>
     </>

@@ -9,17 +9,32 @@ import {
   Pagination,
   Navigation,
 } from "swiper/modules";
+import { useStore } from "effector-react";
+import { $allProjects } from "../../context/projects";
+import { getAllProjectsFx } from "../../app/api/projects";
+import { useEffect } from "react";
 
 const PortfolioPage = () => {
+  const data = useStore($allProjects);
+  const groupedData = [];
+
+  useEffect(() => {
+    getAllProjectsFx();
+  }, []);
+
+  for (let i = 0; i < data.length; i += 2) {
+    groupedData.push(data.slice(i, i + 2));
+  }
+
   return (
     <div data-aos="zoom-in" className="portfolio">
       <div className="skills-title title-portfolio">Portfolio</div>
 
       <Swiper
-        // autoplay={{
-        //   delay: 4000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
@@ -38,71 +53,21 @@ const PortfolioPage = () => {
         modules={[EffectCreative, Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="portfolio-carts">
-            <PortfolioCart
-              title="Project 1"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-            <PortfolioCart
-              title="Project 2"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="portfolio-carts">
-            <PortfolioCart
-              title="Project 3"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-            <PortfolioCart
-              title="Project 4"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="portfolio-carts">
-            <PortfolioCart
-              title="Project 5"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-            <PortfolioCart
-              title="Project 6"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-          </div>
-        </SwiperSlide>
-        ,
-        <SwiperSlide>
-          <div className="portfolio-carts">
-            <PortfolioCart
-              title="Project 7"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-            <PortfolioCart
-              title="Project 8"
-              descr="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-              gitLink=""
-              link=""
-            />
-          </div>
-        </SwiperSlide>
+        {groupedData.map((group, index) => (
+          <SwiperSlide key={index}>
+            <div className="portfolio-carts">
+              {group.map((item, index) => (
+                <PortfolioCart
+                  key={index}
+                  title={item.title}
+                  descr={item.descr}
+                  gitLink={item.git_hub}
+                  link={item.site}
+                />
+              ))}
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );
