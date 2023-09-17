@@ -10,18 +10,13 @@ const AboutPage = () => {
         <PeopleCart
           name="Max Pugachev"
           logo={logoMax}
-          descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-          corrupti, quae itaque expedita eligendi corporis facere, officiis
-          labore esse necessitatibus inventore incidunt repudiandae quam? In sed
-          tempore id deleniti quod."
+          descr="A backend developer with experience in desktop application and game development, I create solutions that are both sophisticated and functional.
+          "
         />
         <PeopleCart
           name="Ivan Shirov"
           logo={logoIvan}
-          descr="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-          corrupti, quae itaque expedita eligendi corporis facere, officiis
-          labore esse necessitatibus inventore incidunt repudiandae quam? In sed
-          tempore id deleniti quod."
+          descr="A frontend and backend developer dedicated to building efficient and sleek digital solutions. "
         />
       </div>
     </div>

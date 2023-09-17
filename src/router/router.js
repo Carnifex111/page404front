@@ -6,6 +6,7 @@ import {
   HomePage,
   ConnectPage,
   PortfolioPage,
+  Page404,
 } from "../pages/index";
 import ROUTINGS from "./routings";
 
@@ -27,6 +28,9 @@ const Router = () => {
       </Route>
       <Route exact path={HOME}>
         <HomePage />
+      </Route>
+      <Route>
+        <Page404 />
       </Route>
     </Switch>
   );
